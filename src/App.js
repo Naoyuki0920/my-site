@@ -7,7 +7,7 @@ import { PrivacyPolicy } from "./components/PrivacyPolicy";
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename="my-site">
       <div className="App">
         <Link to="/">Home</Link>
         <br />
