@@ -7,17 +7,15 @@ import { PrivacyPolicy } from "./components/PrivacyPolicy";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
-        <Link to="/my-site">Home</Link>
+        <Link to="/">Home</Link>
         <br />
-        <Link to="/my-site/PrivacyPolicy">PrivacyPolicy</Link>
+        <Link to="/PrivacyPolicy">PrivacyPolicy</Link>
         <br />
-
         <Routes>
-          {/* exactをつけると完全一致になります。Homeはexactをつけてあげます */}
-          <Route exact path="/my-site" element={<Home />} />
-          <Route path="/my-site/PrivacyPolicy" element={<PrivacyPolicy />} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
     </BrowserRouter>
