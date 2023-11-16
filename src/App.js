@@ -11,8 +11,8 @@ function App() {
         <Link to="/PrivacyPolicy">PrivacyPolicy</Link>
         <br />
         <Routes>
-          <Route exact path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
-          <Route path={`${process.env.PUBLIC_URL}/PrivacyPolicy`} element={<PrivacyPolicy />} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
     </BrowserRouter>
