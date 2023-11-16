@@ -9,15 +9,15 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Link to="/">Home</Link>
+        <Link to="/my-site">Home</Link>
         <br />
-        <Link to="/PrivacyPolicy">PrivacyPolicy</Link>
+        <Link to="/my-site/PrivacyPolicy">PrivacyPolicy</Link>
         <br />
 
         <Routes>
           {/* exactをつけると完全一致になります。Homeはexactをつけてあげます */}
-          <Route exact path="/" element={<Home />} />
-          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+          <Route exact path="/my-site" element={<Home />} />
+          <Route path="/my-site/PrivacyPolicy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
     </BrowserRouter>
